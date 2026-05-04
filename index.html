@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Form</title>
     <link rel="stylesheet" href="st.css">
 </head>
+
 <body>
-    <h2>Student Registration Form</h2>
+    <h1>Student Registration Form</h1>
     <div class="container">
-        <form action="" style="border: 2px solid black;">
+        <form action="" style="border: 4px solid black;">
             <label><strong>Name</strong></label><br>
             <input type="text" required><br>
 
@@ -17,19 +19,24 @@
             <input type="email" required><br>
 
             <label><strong>Gender</strong></label><br>
-            <input type="radio" name="gender" id="male" value="Male"><label for="male">Male</label>
-            <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label>
-            <br><br>
+            <div class="gender-container">
+                <input type="radio" name="gender" id="male" value="Male"><label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label>
+            </div>
+            <br>
 
-            <label><strong>Choose your Desired Subjects</strong></label><br>
-            <input type="checkbox" name="subject" value="Chemistry"> Chemistry<br>
-            <input type="checkbox" name="subject" value="Physics"> Physics<br>
-            <input type="checkbox" name="subject" value="Maths"> Maths<br>
-            <input type="checkbox" name="subject" value="Computer"> Computer<br>
-            <input type="checkbox" name="subject" value="Islamiat"> Islamiat<br>
-            <input type="checkbox" name="subject" value="P.s.t"> P.s.t<br>
-            <input type="checkbox" name="subject" value="Communication"> Communication<br>
-            <input type="checkbox" name="subject" value="Statistics"> Statistics<br><br>
+            <label><strong>Choose your Desired Subjects</strong></label>
+            <div class="subject-grid">
+                <label><input type="checkbox" name="subject" value="Chemistry"> Chemistry</label>
+                <label><input type="checkbox" name="subject" value="Physics"> Physics</label>
+                <label><input type="checkbox" name="subject" value="Maths"> Maths</label>
+                <label><input type="checkbox" name="subject" value="Computer"> Computer</label>
+                <label><input type="checkbox" name="subject" value="Islamiat"> Islamiat</label>
+                <label><input type="checkbox" name="subject" value="P.s.t"> P.s.t</label>
+                <label><input type="checkbox" name="subject" value="Communication"> Communication</label>
+                <label><input type="checkbox" name="subject" value="Statistics"> Statistics</label>
+            </div>
+            <br>
 
             <label><strong>Choose your program</strong></label><br>
             <select name="program">
@@ -39,6 +46,11 @@
                 <option value="Engineering">Engineering</option>
             </select><br><br>
 
+            <div class="form_control">
+                <label for="upload"> <strong>Upload Your CV</strong> </label><br>
+                <input type="file" id="upload" name="upload" />
+            </div><br>
+
             <label><strong>Any Other Queries</strong></label><br>
             <textarea rows="3"></textarea><br><br>
 
@@ -46,4 +58,5 @@
         </form>
     </div>
 </body>
+
 </html>
