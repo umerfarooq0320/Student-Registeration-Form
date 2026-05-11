@@ -1,46 +1,52 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #c7bdbd;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
-    width: 45%; 
+    width: 100%;
+    max-width: 600px;
     margin: auto;
 }
 
 h1 {
-   font-weight: 900;
-    color: rgb(54, 63, 104);
+    font-weight: 900;
+    color: #2e7d32;
     text-align: center;
+    font-size: 32px;
 }
 
 form {
-    background: white;
-    padding: 30px;
+    background: #ffffff;
+    padding: 25px;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-/* Input fields styling */
-input[type="text"], 
-input[type="email"], 
-select, 
-textarea {
-    width: 100%; 
+input[type="text"],
+input[type="email"],
+select,textarea {
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .gender-container {
     margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .subject-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin-top: 15px;
 }
@@ -52,7 +58,7 @@ textarea {
     font-size: 15px;
 }
 
-input[type="radio"], 
+input[type="radio"],
 input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
@@ -60,16 +66,38 @@ input[type="checkbox"] {
 }
 
 button {
-    background-color: #28a745;
+    background-color:  #43a047;
     color: white;
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    width: 100%; 
+    width: 100%;
+    font-size: 16px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color:  #388e3c;
+}
+
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gender-container {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
